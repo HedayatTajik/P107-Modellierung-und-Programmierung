@@ -1,8 +1,11 @@
-import { PasswordGeneratorComponent } from './password-generator/password-generator/password-generator.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home/home.component';
 
 const routes: Routes = [
+  {path:'', redirectTo: '/home', pathMatch: 'full'},
+  {path:"home", component: HomeComponent},
   {
     path: 'passwordGenerator',
     loadChildren: () =>
@@ -10,6 +13,13 @@ const routes: Routes = [
         (m) => m.PasswordGeneratorModule
       ),
   },
+  // {
+  //   path: 'home',
+  //   loadChildren: () =>
+  //     import('./home/home.module').then(
+  //       (m) => m.HomeModule
+  //     ),
+  // },
 ];
 
 @NgModule({
