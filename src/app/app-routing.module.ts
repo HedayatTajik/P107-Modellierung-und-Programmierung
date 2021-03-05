@@ -1,10 +1,19 @@
+import { PasswordGeneratorComponent } from './password-generator/password-generator/password-generator.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'passwordGenerator',
+    loadChildren: () =>
+      import('./password-generator/password-generator.module').then(
+        (m) => m.PasswordGeneratorModule
+      ),
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
