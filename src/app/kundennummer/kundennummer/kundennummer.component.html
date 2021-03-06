@@ -1,0 +1,61 @@
+<div class="display">
+  <mat-card class="example-card-new">
+    <mat-card-header>
+      <mat-card-title>Kundennummer erzeugen</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <h3>Kundennummer: {{ endNumber }}</h3>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="numberGeneratorOnclick()"
+      >
+        neue Kundennummer erzeugen
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="!savedButton"
+        (click)="saveKundenNummer()"
+      >
+        KundenNummer speichern
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card *ngIf="arrayOfAboNummers.length > 0" class="example-card">
+    <mat-card-header>
+      <mat-card-title>Geschpeicherte Kundennummer</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Kundennummer</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let item of arrayOfAboNummers; let indexOfelement = index">
+          <td>{{ indexOfelement + 1 }}</td>
+          <td>{{ item }}</td>
+          <td>
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="deleteItem(indexOfelement)"
+            >
+              löschen
+            </button>
+          </td>
+        </tr>
+      </table>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="deleteAllPassword()">
+        Alle Passworde löschen
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

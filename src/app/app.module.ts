@@ -10,10 +10,12 @@ import { CoreModule } from './core/core.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home/home.component';
+import { KundennummerComponent } from './kundennummer/kundennummer/kundennummer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    KundennummerComponent
   ],
   imports: [
     // core

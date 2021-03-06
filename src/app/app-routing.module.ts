@@ -12,6 +12,12 @@ const routes: Routes = [
       import('./password-generator/password-generator.module').then(
         (m) => m.PasswordGeneratorModule
       ),
+  },  {
+    path: 'kundenNummer',
+    loadChildren: () =>
+      import('./kundennummer/kundennummer.module').then(
+        (m) => m.KundennummerModule
+      ),
   },
   // {
   //   path: 'home',
