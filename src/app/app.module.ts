@@ -10,13 +10,9 @@ import { CoreModule } from './core/core.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home/home.component';
-import { KundennummerComponent } from './kundennummer/kundennummer/kundennummer.component';
+import { ZeichenketteComponent } from './zeichenkette/zeichenkette/zeichenkette.component';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    KundennummerComponent
-  ],
+  declarations: [AppComponent, HomeComponent, ZeichenketteComponent],
   imports: [
     // core
     CoreModule,
@@ -24,9 +20,9 @@ import { KundennummerComponent } from './kundennummer/kundennummer/kundennummer.
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

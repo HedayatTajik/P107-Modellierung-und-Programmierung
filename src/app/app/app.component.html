@@ -1,15 +1,40 @@
+<mat-toolbar color="accent">
+  <span>Modellierung-und-Programmierung App</span>
 
-  <mat-toolbar color="accent">
-    <span>Modellierung-und-Programmierung App</span>
+  <span class="example-spacer"></span>
 
-    <span class="example-spacer"></span>
-
-    <button class="marging" routerLink="/home" mat-stroked-button> Home</button>
-    <button class="marging" routerLink="/passwordGenerator" mat-stroked-button> Password Generator</button>
-    <button class="marging" routerLink="/kundenNummer" mat-stroked-button> Kundennummer erzeugen und prüfen</button>
-
-  </mat-toolbar>
+  <button
+    class="marging"
+    routerLink="/home"
+    routerLinkActive
+    mat-flat-button
+  >
+    Home
+  </button>
+  <button
+    class="marging"
+    routerLink="/passwordGenerator"
+    routerLinkActive
+    mat-flat-button
+  >
+    Password Generator
+  </button>
+  <button
+    class="marging"
+    routerLink="/kundenNummer"
+    routerLinkActive
+    mat-flat-button
+  >
+    Kundennummer
+  </button>
+  <button
+    class="marging"
+    routerLink="/zeichenkette"
+    routerLinkActive
+    mat-flat-button
+  >
+    Zeichenkette
+  </button>
+</mat-toolbar>
 
 <router-outlet></router-outlet>
-
-
