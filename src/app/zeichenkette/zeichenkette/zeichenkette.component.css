@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.img {
+  width: 30px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.state {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

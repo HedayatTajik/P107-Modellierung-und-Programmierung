@@ -1,6 +1,8 @@
+import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ZeichenketteRoutingModule } from './zeichenkette-routing.module';
+
 
 
 
@@ -8,7 +10,8 @@ import { ZeichenketteRoutingModule } from './zeichenkette-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    ZeichenketteRoutingModule
+    ZeichenketteRoutingModule,
+    SharedModule
   ]
 })
 export class ZeichenketteModule { }
