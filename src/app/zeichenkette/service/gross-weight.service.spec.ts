@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ZeichenketteService } from './service/zeichenkette.service';
+import { GrossWeightService } from './gross-weight.service';
 
-describe('ZeichenketteService', () => {
-  let service: ZeichenketteService;
+describe('GrossWeightService', () => {
+  let service: GrossWeightService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ZeichenketteService);
+    service = TestBed.inject(GrossWeightService);
   });
 
   it('should be created', () => {
