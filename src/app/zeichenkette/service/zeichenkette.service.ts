@@ -24,7 +24,7 @@ export class ZeichenketteService {
       return 'String enthält nicht ausschließlich Ziffern';
     } else if (checkIfNummber === true && netWeight < grossWeight) {
       return 'Kein Fehler';
-    } else if (netWeight > grossWeight) {
+    } else {
       return ' Nettogewicht ist größer als Bruttogewicht';
     }
   }
