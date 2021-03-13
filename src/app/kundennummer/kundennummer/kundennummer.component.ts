@@ -25,7 +25,7 @@ export class KundennummerComponent implements OnInit {
   numberGeneratorOnclick() {
     this.summeNumber = 0;
     this.secoundPositionArray = [];
-    for (let index = 1; index <= 9; index++) {
+    for (let index = 1; index < 9; index++) {
       this.oneNumber = this.kundennummerService.numberGenerator();
       this.secoundPositionArray.push(this.oneNumber);
       this.summeNumber += this.oneNumber;
