@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GeneratorService } from '../generator.service';
-
+import { of } from 'rxjs';
 @Component({
   selector: 'app-password-generator',
   templateUrl: './password-generator.component.html',
@@ -16,6 +16,7 @@ export class PasswordGeneratorComponent implements OnInit {
   constructor(private generatorService: GeneratorService) {}
 
   ngOnInit(): void {
+
   }
   generator(): void {
     this.randomNumberArray = [];
@@ -25,6 +26,7 @@ export class PasswordGeneratorComponent implements OnInit {
     }
     this.passwords = String.fromCharCode(...this.randomNumberArray);
     this.savedButton = true;
+
   }
 
   savePassword() {
@@ -38,4 +40,6 @@ export class PasswordGeneratorComponent implements OnInit {
     this.savedButton = false;
   }
 
+
 }
+
