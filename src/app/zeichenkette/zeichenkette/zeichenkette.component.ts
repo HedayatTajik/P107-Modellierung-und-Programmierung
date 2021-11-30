@@ -27,7 +27,7 @@ export class ZeichenketteComponent implements OnInit {
   summe = 0;
   schreiben = 0;
   ngOnInit(): void {
-    this.sendMethode(this.strichcodeString1);
+    this.sendMethode(this.strichcodeString2);
 
 
     

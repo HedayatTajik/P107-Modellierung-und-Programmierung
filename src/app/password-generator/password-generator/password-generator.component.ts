@@ -13,9 +13,32 @@ export class PasswordGeneratorComponent implements OnInit {
   randomNumberArray: number[] = [];
   savedPasswordArray = [];
   savedButton: boolean = false;
+
+  crd
   constructor(private generatorService: GeneratorService) {}
 
   ngOnInit(): void {
+
+    var options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+
+    function success(pos) {
+       this.crd = pos.coords;
+
+      console.log('Your current position is:');
+      console.log(`Latitude : ${ this.crd.latitude}`);
+      console.log(`Longitude: ${ this.crd.longitude}`);
+      console.log(`More or less ${ this.crd.accuracy} meters.`);
+    }
+
+    function error(err) {
+      console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+
+    navigator.geolocation.getCurrentPosition(success, error, options)
 
   }
   generator(): void {
