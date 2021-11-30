@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'ovm'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C317DCF21BB347499569CEC92E3701D4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0C28253DC1D4B3687583B2EB45B9C80 }}
           package: .
