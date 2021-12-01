@@ -19,6 +19,10 @@ export class PasswordGeneratorComponent implements OnInit {
 
   ngOnInit(): void {
 
+
+  }
+
+  getLocation(){
     var options = {
       enableHighAccuracy: true,
       timeout: 5000,
