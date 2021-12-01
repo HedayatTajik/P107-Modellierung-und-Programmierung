@@ -16,30 +16,12 @@ export class PasswordGeneratorComponent implements OnInit {
 
   constructor(private generatorService: GeneratorService) {}
 
-  public lat;
-  public lng;
 
   ngOnInit(): void {
 
-    this.getLocation()
-
-
   }
 
 
-  getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        if (position) {
-          this.lat = position.coords.latitude;
-          this.lng = position.coords.longitude;
-        }
-      },
-        (error) => console.log(error));
-    } else {
-      alert("Geolocation is not supported by this browser.");
-    }
-  }
 
   generator(): void {
     this.randomNumberArray = [];
